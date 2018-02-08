@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  ruby:
+    build:
+       context: ../
+       dockerfile: ./1.9.3/Dockerfile
+    image: doublezhiming/ruby:1.9.3
+    command: /bin/bash
