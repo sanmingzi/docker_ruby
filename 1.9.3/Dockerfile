@@ -23,7 +23,7 @@ RUN cd $DOWNLOAD_PATH \
     && wget -O ruby.tar.gz https://cache.ruby-lang.org/pub/ruby/$RUBY_MAJOR/ruby-$RUBY_VERSION.tar.gz \
     && tar xvzf ruby.tar.gz -C $SRC_PATH \
     && cd $SRC_PATH/ruby-$RUBY_VERSION \
-    && ./configure --disable-install-doc --enable-shared \
+    && ./configure --disable-install-doc --enable-shared --without-tcl --without-tk --disable-option-checking \
     && make \
     && make install \
     && make clean
@@ -33,7 +33,7 @@ RUN cd $DOWNLOAD_PATH \
     && wget -O rubygems.tgz https://rubygems.org/rubygems/rubygems-$RUBYGEMS_VERSION.tgz \
     && tar xvzf rubygems.tgz -C $SRC_PATH \
     && cd $SRC_PATH/rubygems-$RUBYGEMS_VERSION \
-    && ruby setup.rb
+    && ruby setup.rb --no-document
 
 RUN gem install bundler -v $BUNDLER_VERSION --no-document
 
