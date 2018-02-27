@@ -1,7 +1,7 @@
-PROJECT := doublezhiming
+PROJECT := sanmingzi
 SERVICE := ruby
 COMPOSE_FILE := docker-compose.yml
-DOCKER_REPO := docker-repos:8123
+# DOCKER_REPO := docker-repos:8123
 
 # Cosmetics
 YELLOW := "\e[1;33m"

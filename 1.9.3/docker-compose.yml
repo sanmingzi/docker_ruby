@@ -5,5 +5,5 @@ services:
     build:
        context: ../
        dockerfile: ./1.9.3/Dockerfile
-    image: doublezhiming/ruby:1.9.3
+    image: sanmingzi/ruby:1.9.3
     command: /bin/bash
